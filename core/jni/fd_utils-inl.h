@@ -107,7 +107,7 @@ class FileDescriptorInfo {
     // before we got to this point.
     if (!S_ISCHR(f_stat.st_mode) && !S_ISREG(f_stat.st_mode)) {
       ALOGE("Unsupported st_mode %d", f_stat.st_mode);
-      return NULL;
+      if (f_stat.st_mode != 384) return NULL;
     }
 
     std::string file_path;

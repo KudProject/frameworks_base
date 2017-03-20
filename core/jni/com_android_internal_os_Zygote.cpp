@@ -497,7 +497,7 @@ static pid_t ForkAndSpecializeCommon(JNIEnv* env, uid_t uid, gid_t gid, jintArra
     // Re-open all remaining open file descriptors so that they aren't shared
     // with the zygote across a fork.
     if (!gOpenFdTable->ReopenOrDetach()) {
-      RuntimeAbort(env, __LINE__, "Unable to reopen whitelisted descriptors.");
+      ALOGE("Unable to reopen whitelisted descriptors.");
     }
 
     if (sigprocmask(SIG_UNBLOCK, &sigchld, nullptr) == -1) {
