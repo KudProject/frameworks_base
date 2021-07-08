@@ -38,6 +38,7 @@ import android.annotation.SystemService;
 import android.annotation.TestApi;
 import android.annotation.WorkerThread;
 import android.app.PendingIntent;
+import android.app.compat.gms.GmsCompat;
 import android.app.role.RoleManager;
 import android.compat.Compatibility;
 import android.compat.annotation.ChangeId;
@@ -1933,6 +1934,10 @@ public class TelephonyManager {
     @SuppressAutoDoc // No support for device / profile owner or carrier privileges (b/72967236).
     @RequiresPermission(android.Manifest.permission.READ_PRIVILEGED_PHONE_STATE)
     public String getDeviceId() {
+        if (GmsCompat.isEnabled()) {
+            return null;
+        }
+
         try {
             ITelephony telephony = getITelephony();
             if (telephony == null)
@@ -1988,6 +1993,10 @@ public class TelephonyManager {
     @SuppressAutoDoc // No support for device / profile owner or carrier privileges (b/72967236).
     @RequiresPermission(android.Manifest.permission.READ_PRIVILEGED_PHONE_STATE)
     public String getDeviceId(int slotIndex) {
+        if (GmsCompat.isEnabled()) {
+            return null;
+        }
+
         // FIXME this assumes phoneId == slotIndex
         try {
             IPhoneSubInfo info = getSubscriberInfoService();
@@ -2169,6 +2178,10 @@ public class TelephonyManager {
     @SuppressAutoDoc // No support for device / profile owner or carrier privileges (b/72967236).
     @RequiresPermission(android.Manifest.permission.READ_PRIVILEGED_PHONE_STATE)
     public String getMeid(int slotIndex) {
+        if (GmsCompat.isEnabled()) {
+            return null;
+        }
+
         ITelephony telephony = getITelephony();
         if (telephony == null) return null;
 
@@ -3026,6 +3039,10 @@ public class TelephonyManager {
     @RequiresPermission(android.Manifest.permission.READ_PHONE_STATE)
     @UnsupportedAppUsage(maxTargetSdk = Build.VERSION_CODES.P)
     public int getNetworkType(int subId) {
+        if (GmsCompat.isEnabled()) {
+            return NETWORK_TYPE_UNKNOWN;
+        }
+
         try {
             ITelephony telephony = getITelephony();
             if (telephony != null) {
@@ -3934,6 +3951,10 @@ public class TelephonyManager {
     @RequiresPermission(android.Manifest.permission.READ_PRIVILEGED_PHONE_STATE)
     @UnsupportedAppUsage
     public String getSimSerialNumber(int subId) {
+        if (GmsCompat.isEnabled()) {
+            return null;
+        }
+
         try {
             IPhoneSubInfo info = getSubscriberInfoService();
             if (info == null)
@@ -4063,6 +4084,10 @@ public class TelephonyManager {
     @SystemApi
     @RequiresPermission(android.Manifest.permission.READ_PRIVILEGED_PHONE_STATE)
     public UiccSlotInfo[] getUiccSlotsInfo() {
+        if (GmsCompat.isEnabled()) {
+            return null;
+        }
+
         try {
             ITelephony telephony = getITelephony();
             if (telephony == null) {
@@ -4227,6 +4252,10 @@ public class TelephonyManager {
     @RequiresPermission(android.Manifest.permission.READ_PRIVILEGED_PHONE_STATE)
     @UnsupportedAppUsage(maxTargetSdk = Build.VERSION_CODES.P)
     public String getSubscriberId(int subId) {
+        if (GmsCompat.isEnabled()) {
+            return null;
+        }
+
         try {
             IPhoneSubInfo info = getSubscriberInfoService();
             if (info == null)
