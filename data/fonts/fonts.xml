@@ -24,20 +24,25 @@
     <family name="sans-serif">
         <font weight="100" style="normal">Roboto-Thin.ttf</font>
         <font weight="100" style="italic">Roboto-ThinItalic.ttf</font>
+        <font weight="200" style="normal">Roboto-ExtraLight.ttf</font>
+        <font weight="200" style="italic">Roboto-ExtraLightItalic.ttf</font>
         <font weight="300" style="normal">Roboto-Light.ttf</font>
         <font weight="300" style="italic">Roboto-LightItalic.ttf</font>
         <font weight="400" style="normal">Roboto-Regular.ttf</font>
         <font weight="400" style="italic">Roboto-Italic.ttf</font>
         <font weight="500" style="normal">Roboto-Medium.ttf</font>
         <font weight="500" style="italic">Roboto-MediumItalic.ttf</font>
-        <font weight="900" style="normal">Roboto-Black.ttf</font>
-        <font weight="900" style="italic">Roboto-BlackItalic.ttf</font>
+        <font weight="600" style="normal">Roboto-SemiBold.ttf</font>
+        <font weight="600" style="italic">Roboto-SemiBoldItalic.ttf</font>
         <font weight="700" style="normal">Roboto-Bold.ttf</font>
         <font weight="700" style="italic">Roboto-BoldItalic.ttf</font>
+        <font weight="800" style="normal">Roboto-ExtraBold.ttf</font>
+        <font weight="800" style="italic">Roboto-ExtraBoldItalic.ttf</font>
+        <font weight="900" style="normal">Roboto-Black.ttf</font>
+        <font weight="900" style="italic">Roboto-BlackItalic.ttf</font>
     </family>
 
     <!-- Note that aliases must come after the fonts they reference. -->
-    <alias name="sans-serif-thin" to="sans-serif" weight="100" />
     <alias name="sans-serif-light" to="sans-serif" weight="300" />
     <alias name="sans-serif-regular" to="sans-serif" weight="400" />
     <alias name="sans-serif-medium" to="sans-serif" weight="500" />
@@ -49,6 +54,8 @@
     <alias name="verdana" to="sans-serif" />
 
     <family name="sans-serif-condensed">
+        <font weight="100" style="normal">RobotoCondensed-Thin.ttf</font>
+        <font weight="100" style="italic">RobotoCondensed-Thin.ttf</font>
         <font weight="300" style="normal">RobotoCondensed-Light.ttf</font>
         <font weight="300" style="italic">RobotoCondensed-LightItalic.ttf</font>
         <font weight="400" style="normal">RobotoCondensed-Regular.ttf</font>
@@ -57,6 +64,10 @@
         <font weight="500" style="italic">RobotoCondensed-MediumItalic.ttf</font>
         <font weight="700" style="normal">RobotoCondensed-Bold.ttf</font>
         <font weight="700" style="italic">RobotoCondensed-BoldItalic.ttf</font>
+        <font weight="800" style="normal">RobotoCondensed-ExtraBold.ttf</font>
+        <font weight="800" style="italic">RobotoCondensed-ExtraBoldItalic.ttf</font>
+        <font weight="900" style="normal">RobotoCondensed-Black.ttf</font>
+        <font weight="900" style="italic">RobotoCondensed-BlackItalic.ttf</font>
     </family>
     <alias name="sans-serif-condensed-thin" to="sans-serif-condensed" weight="100" />
     <alias name="sans-serif-condensed-light" to="sans-serif-condensed" weight="300" />
@@ -117,6 +128,28 @@
     <alias name="source-sans-pro-semi-bold" to="source-sans-pro" weight="600" />
 
     <!-- fallback fonts -->
+    <family lang="und-Latn">
+        <font weight="100" style="normal">RobotoFallback-Thin.ttf</font>
+        <font weight="100" style="italic">RobotoFallback-ThinItalic.ttf</font>
+        <font weight="300" style="normal">RobotoFallback-Light.ttf</font>
+        <font weight="300" style="italic">RobotoFallback-LightItalic.ttf</font>
+        <font weight="400" style="normal">RobotoFallback-Regular.ttf</font>
+        <font weight="400" style="italic">RobotoFallback-Italic.ttf</font>
+        <font weight="500" style="normal">RobotoFallback-Medium.ttf</font>
+        <font weight="500" style="italic">RobotoFallback-MediumItalic.ttf</font>
+        <font weight="900" style="normal">RobotoFallback-Black.ttf</font>
+        <font weight="900" style="italic">RobotoFallback-BlackItalic.ttf</font>
+        <font weight="700" style="normal">RobotoFallback-Bold.ttf</font>
+        <font weight="700" style="italic">RobotoFallback-BoldItalic.ttf</font>
+        <font weight="300" style="normal" fallbackFor="sans-serif-condensed">RobotoFallbackCondensed-Light.ttf</font>
+        <font weight="300" style="italic" fallbackFor="sans-serif-condensed">RobotoFallbackCondensed-LightItalic.ttf</font>
+        <font weight="400" style="normal" fallbackFor="sans-serif-condensed">RobotoFallbackCondensed-Regular.ttf</font>
+        <font weight="400" style="italic" fallbackFor="sans-serif-condensed">RobotoFallbackCondensed-Italic.ttf</font>
+        <font weight="500" style="normal" fallbackFor="sans-serif-condensed">RobotoFallbackCondensed-Medium.ttf</font>
+        <font weight="500" style="italic" fallbackFor="sans-serif-condensed">RobotoFallbackCondensed-MediumItalic.ttf</font>
+        <font weight="700" style="normal" fallbackFor="sans-serif-condensed">RobotoFallbackCondensed-Bold.ttf</font>
+        <font weight="700" style="italic" fallbackFor="sans-serif-condensed">RobotoFallbackCondensed-BoldItalic.ttf</font>
+    </family>
     <family lang="und-Arab" variant="elegant">
         <font weight="400" style="normal">NotoNaskhArabic-Regular.ttf</font>
         <font weight="700" style="normal">NotoNaskhArabic-Bold.ttf</font>
